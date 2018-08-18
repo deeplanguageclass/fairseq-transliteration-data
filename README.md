@@ -40,7 +40,22 @@ The result will be:
 
 ## Generating new data
 
+We can generate a parallel corpus from an unlabelled monolingual corpus in the *target* language.
+
+### Data file
+
+Any text in the target language will work.  It can contain noise - words or lines in the source language or third languages.
+
+For example you can use a Wikipedia dump, cleaned and de-duped.
+
+### Transliteration rules
+
+`transliteration.json` is a mapping from target character sequences to source character sequence options.
+
+### Run
 ```
 node generate.js data.txt 
 ```
-This will yield `data.txt.src` and `data.txt.trg`.
+This will yield `data.txt.src` and `data.txt.trg`, which will have the same length.
+
+Note that it cuts long rows and removes invalid rows, so they may not have exactly same length as data.txt.
