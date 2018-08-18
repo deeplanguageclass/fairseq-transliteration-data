@@ -37,3 +37,10 @@ The result will be:
       Patker
       Patkeri qnnarkum
 ```
+
+## Generating new data
+
+```
+node generate.js data.txt 
+```
+This will yield `data.txt.src` and `data.txt.trg`.
